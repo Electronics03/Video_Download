@@ -42,7 +42,7 @@ Key components and behavior of the script:
 ### save_video(video_url, save_name)
 - Downloads the video at `video_url` and saves it as `save_name + ".mp4"` locally.
 - By default it saves to the current working directory because any absolute download path is commented out.
-    - To change the default directory, edit/enable the `download_path` string inside `save_video`, e.g. `"C:\\Users\\PSH\\Downloads\\" + save_name + ".mp4"`.
+    - To change the default directory, edit/enable the `download_path` string inside `save_video`, e.g. `"C:\\Users\\UserName\\Downloads\\" + save_name + ".mp4"`.
 - Creates target directories as needed using `os.makedirs`.
 - Error handling:
     - `urllib.error.HTTPError`: prints HTTP status and message
@@ -113,7 +113,7 @@ Lecture3
 ###  `save_video(video_url, save_name)`
 - 주어진 `video_url`에서 비디오를 다운로드하여 로컬에 `save_name + ".mp4"`로 저장합니다.
 - 현재 코드에서는 절대 경로 부분이 주석 처리되어 있어, 기본적으로 실행 중인 작업 디렉터리에 `save_name.mp4`로 저장됩니다.
-    - 원하는 디렉터리에 저장하려면 `download_path`의 주석 처리된 문자열을 수정/활성화하세요. 예: `"C:\\Users\\PSH\\Downloads\\" + save_name + ".mp4"`
+    - 원하는 디렉터리에 저장하려면 `download_path`의 주석 처리된 문자열을 수정/활성화하세요. 예: `"C:\\Users\\UserName\\Downloads\\" + save_name + ".mp4"`
 - 필요한 경우 대상으로 디렉터리를 자동으로 생성합니다(`os.makedirs` 사용).
 - 예외 처리:
     - `urllib.error.HTTPError`: HTTP 응답 오류 (상태 코드 + 메시지)를 출력
